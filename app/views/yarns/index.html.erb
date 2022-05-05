@@ -5,7 +5,9 @@
 <ul>
   <% @articles.each do |article| %>
     <li>
-      <%= article.name %> <br>
+      <a href="<%= yarns_path(article) %>">
+        <%= article.name %>
+      </a>
       <%= article.weight %> <br>
       <%= article.fiber %> <br>
       <%= article.yardage %> <br>
