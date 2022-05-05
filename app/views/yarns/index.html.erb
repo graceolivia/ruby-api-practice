@@ -1,2 +1,14 @@
-<h1>Yarns#index</h1>
-<p>Find me in app/views/yarns/index.html.erb</p>
+<h1>Here are the yarns</h1>
+<p>Oh, no yarns? TOO BAD!!!</p>
+<h1>Articles</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= article.name %> <br>
+      <%= article.weight %> <br>
+      <%= article.fiber %> <br>
+      <%= article.yardage %> <br>
+    </li>
+  <% end %>
+</ul>
