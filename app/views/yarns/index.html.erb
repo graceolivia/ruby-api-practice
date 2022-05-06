@@ -4,17 +4,21 @@
   <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
 </div>
 
-<ul>
+
   <% @articles.each do |article| %>
-    <li>
-      <a href="<%= yarns_path(article) %>">
+  <div class="panel panel-default" style="width: 18rem;">
+  <h5 class="panel-heading">      <a href="<%= yarns_path(article) %>">
         <%= article.name %>
-      </a>
-      <%= article.weight %> <br>
+      </a></h5>
+  <div class="panel-body">
+
+<h6 class="card-subtitle mb-2 text-muted"><%= article.weight %> <br></h6>
+
       <%= article.fiber %> <br>
       <%= article.yardage %> <br>
-    </li>
+  </div>
+</div>
   <% end %>
-</ul>
+
 
 <%= link_to "New Yarn", {:controller => 'yarns', :action => 'new'} %>
