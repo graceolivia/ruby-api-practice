@@ -1,0 +1,28 @@
+<h1>New Article</h1>
+
+<%= form_with model: @article do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :weight %><br>
+    <%= form.text_area :weight %>
+  </div>
+
+  <div>
+    <%= form.label :fiber %><br>
+    <%= form.text_area :fiber %>
+  </div>
+
+  <div>
+    <%= form.label :yardage %><br>
+    <%= form.text_area :yardage  %>
+  </div>
+
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
