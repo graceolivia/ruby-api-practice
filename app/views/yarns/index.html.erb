@@ -6,12 +6,11 @@
 
 
   <% @articles.each do |article| %>
-  <div class="panel panel-default" style="width: 18rem;">
-  <h5 class="panel-heading">      <a href="<%= yarns_path(article) %>">
+  <div class="card" style="width: 18rem;">
+  <div class="card-body">
+<h5 class="card-title">      <a href="<%= yarns_path(article) %>">
         <%= article.name %>
       </a></h5>
-  <div class="panel-body">
-
 <h6 class="card-subtitle mb-2 text-muted"><%= article.weight %> <br></h6>
 
       <%= article.fiber %> <br>
